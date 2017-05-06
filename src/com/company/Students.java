@@ -11,6 +11,9 @@ public class Students {
     public String getStudentName() {
         return studentName;
     }
+    public void setQ1Grade(int numb) {
+
+    }
     int secretNumber;
     String studentName;
     int totalGrade;
