@@ -1,8 +1,11 @@
 package com.company;
 
+import jdk.internal.util.xml.impl.Input;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
 
@@ -23,10 +26,7 @@ public class Main {
             Scanner s = new Scanner(x);
             s.useDelimiter("\t");
             Students a = findStudent(s.nextInt());
-            while (s.hasNext()) {
-                System.out.print(s.next());
-            }
-            System.out.println("\n");
+            double q1 = 0, q2 = 0;
         }
     }
     static Students findStudent(int numb) {
@@ -36,8 +36,8 @@ public class Main {
         }
         return null;
     }
-    static int getGrade(String s) {
-        int points = 0;
+    static double getGrade(String s) {
+        double points = 0;
         return points;
     }
     static ArrayList<Students> student = new ArrayList<>();
