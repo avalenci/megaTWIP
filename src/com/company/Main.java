@@ -1,11 +1,8 @@
 package com.company;
 
-import jdk.internal.util.xml.impl.Input;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
 
@@ -27,6 +24,10 @@ public class Main {
             s.useDelimiter("\t");
             Students a = findStudent(s.nextInt());
             double q1 = 0, q2 = 0;
+            a.setGrades(q1, q2);
+        }
+        for (Students a: student) {
+            //System.out.println(a.getSecretNumber() + " " + a.totalGrade + " " + a.q1Grade + " " + a.q2Grade);
         }
     }
     static Students findStudent(int numb) {

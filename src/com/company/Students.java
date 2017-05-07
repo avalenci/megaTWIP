@@ -11,12 +11,20 @@ public class Students {
     public String getStudentName() {
         return studentName;
     }
-    public void setQ1Grade(int numb) {
-
+    public void setGrades(double q1, double q2) {
+        q1numb++;
+        q2numb++;
+        q1Grade += (int)(q1/q1numb);
+        q2Grade += (int)(q2/q2numb);
+        if (q2numb == 2) {
+            totalGrade = (q1Grade + q2Grade)/2;
+        }
     }
-    int secretNumber;
-    String studentName;
-    int totalGrade;
-    int q1Grade;
-    int q2Grade;
+    private int secretNumber;
+    private String studentName;
+    public int totalGrade;
+    public int q1Grade = 0;
+    public int q2Grade = 0;
+    private int q1numb = 0;
+    private int q2numb = 0;
 }
