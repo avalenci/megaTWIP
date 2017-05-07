@@ -22,11 +22,11 @@ public class Main {
         for (String x : lines) {
             Scanner s = new Scanner(x);
             s.useDelimiter("\t");
-            int numb = s.nextInt();
-            Students a = findStudent(numb);
+            Students a = findStudent(s.nextInt());
             while (s.hasNext()) {
-                System.out.println(s.next());
+                System.out.print(s.next());
             }
+            System.out.println("\n");
         }
     }
     static Students findStudent(int numb) {
