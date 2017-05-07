@@ -3,6 +3,7 @@ package com.company;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 public class Main {
 
@@ -45,20 +46,21 @@ public class Main {
             }
             a.setGrades(q1, q2);
         }
+        Collections.sort(student);
         System.out.println("Name\tSecret Number\tAvg Total Grade\tFR Q1 Grade\tFR Q2 Grade");
         for (Students a: student) {
             System.out.println(a.getStudentName() + "\t" + a.getSecretNumber() + "\t\t\t\t"
                     + a.totalGrade + "\t\t\t\t" + a.q1Grade + "\t\t\t" + a.q2Grade);
         }
     }
-    static Students findStudent(int numb) {
+    private static Students findStudent(int numb) {
         for (Students x : student) {
             if (x.getSecretNumber() == numb)
                 return x;
         }
         return null;
     }
-    static double getGrade(String s) {
+    private static double getGrade(String s) {
         double points = 0;
         if (s.equals("") || s.equals("0"))
             return .01;
@@ -84,5 +86,5 @@ public class Main {
 
         return points;
     }
-    static ArrayList<Students> student = new ArrayList<>();
+    private static ArrayList<Students> student = new ArrayList<>();
 }
