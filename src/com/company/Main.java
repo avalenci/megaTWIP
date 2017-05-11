@@ -47,10 +47,11 @@ public class Main {
             a.setGrades(q1, q2);
         }
         Collections.sort(student);
-        System.out.println("+-----------------------------------------------------------------------------------------------+");
+        String line = "+-----------------------------------------------------------------------------------------------+";
+        System.out.println(line);
         System.out.println("|Name\t\t\t|Secret Number\t\t|Avg Total Grade\t|FR Q1 Grade\t\t|FR Q2 Grade\t\t|");
         for (Students a: student) {
-            System.out.println("+-----------------------------------------------------------------------------------------------+");
+            System.out.println(line);
             if (a.getStudentName().length() > 10)
                 System.out.println("|" + a.getStudentName() + "\t|" + a.getSecretNumber() + "\t\t\t\t\t|" + a.totalGrade +
                         "\t\t\t\t\t|" + a.q1Grade + "\t\t\t\t\t|" + a.q2Grade + "\t\t\t\t\t|");
@@ -61,7 +62,7 @@ public class Main {
                 System.out.println("|" + a.getStudentName() + "\t\t\t|" + a.getSecretNumber() + "\t\t\t\t\t|" + a.totalGrade +
                         "\t\t\t\t\t|" + a.q1Grade + "\t\t\t\t\t|" + a.q2Grade + "\t\t\t\t\t|");
         }
-        System.out.println("+-----------------------------------------------------------------------------------------------+");
+        System.out.println(line);
     }
     private static Students findStudent(int numb) {
         for (Students x : student) {
